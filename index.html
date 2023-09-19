@@ -14,28 +14,35 @@
 	<body>
 		<header>
 			<img id="logo" src="assets/FD.png" alt="get your drink logo">
-			<span>Programmed by <a href="https://github.com/a-then">@a-then</a></span>
+			
 		</header>
 		<main>
 			<section class="lookForCocktail">
-				<h1>Look up your cocktail</h1>
-				<input type="text" name="Search" placeholder="Search by cocktail name" value="">
-				<button type="button" name="button">Get Recipe</button>
+				<div class="borderColor">
+					<h1>Look up your cocktail</h1>
+					<input type="text" name="Search" placeholder="Search by cocktail name" value="">
+					<button class="borderColor" type="button" name="button">
+						<span>Get Recipe</span>
+					</button>
+				</div>
 			</section>
-			<section class="hidden">
+			<section class="drinkContainer hidden">
 				<h2>Name</h2>
 				<img id="cocktailThumb" src="" alt="">
-				<h3>Ingredients</h3>
-				<ul id="ingredients">
-					<!-- li come from js -->
-
-				</ul>
-				<h3>Instructions</h3>
-				<p class="instructions"></p>
+				<div class="ingredients">
+					<h3>Ingredients:</h3>
+					<ul id="ingredients">
+						<!-- li come from js -->
+					</ul>
+				</div>
+				<div class="instructions">
+					<h3>Instructions:</h3>
+					<p id="instructions"></p>
+				</div>
 			</section>
 		</main>
 		<footer>
-			
+			<span>Developed by <a href="https://github.com/a-then">@a-then</a></span>
 		</footer>
 		<script type="text/javascript" src="js/main.js"></script>
 	</body>
