@@ -11,21 +11,16 @@ function getDrink() {
   fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${drink}`)
     .then(res => res.json()) // parse response as JSON
     .then(data => {
-      const drink = data.drinks[0]
-      console.log(drink)
-      document.querySelector('h2').innerText = drink.strDrink
-      document.querySelector('#cocktailThumb').src = drink.strDrinkThumb
-      document.querySelector('.instructions').innerText = drink.strInstructions
-
-      let liIngred = document.createElement('li');
-      let ulIngred = document.getElementById('ingredients')
-
-      let entries = Object.entries(drink)
-      entries.map(([key, val] = entry) => {
-        if (key.startsWith('strIngredient') && (val !== null)) {
-          liIngred.appendChild(document.createTextNode(val))
-          console.log(liIngred);
-          ulIngred.appendChild(liIngred)
+      const cocktail = data.drinks[0]
+      console.log(cocktail)
+      document.querySelector('h2').innerText = cocktail.strDrink
+      document.querySelector('#cocktailThumb').src = cocktail.strDrinkThumb
+      document.querySelector('.instructions').innerText = cocktail.strInstructions
+      
+      document.querySelectorAll('li').forEach( currLi => currLi.remove() )
+      Object.entries(cocktail).map(([key, val] ) => {
+        if ( key.startsWith('strIngredient') && (val !== null) ) {
+          document.getElementById('ingredients').appendChild( document.createElement('li')).textContent = val  
         }
       })
 
