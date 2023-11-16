@@ -23,12 +23,19 @@ function showCocktailInfo(data) {
       console.log(cocktail)
       document.querySelector('h2').innerText = cocktail.strDrink
       document.querySelector('#cocktailThumb').src = cocktail.strDrinkThumb
-      document.querySelector('#instructions').innerText = cocktail.strInstructions
+      document.querySelector('.instructions').innerText = cocktail.strInstructions
+      const ingredients = document.querySelector('.ingredients')
+
+      // document.querySelectorAll('li').forEach( currLi => currLi.remove() )
       
-      document.querySelectorAll('li').forEach( currLi => currLi.remove() )
       Object.entries(cocktail).map(([key, val] ) => {
+
+        if ( key.startsWith('strMeasure') && (val !== null) ) {
+          document.querySelector('.measures').appendChild( document.createElement('li')).textContent = val
+          
+        }
         if ( key.startsWith('strIngredient') && (val !== null) ) {
-          document.getElementById('ingredients').appendChild( document.createElement('li')).textContent = val  
+          document.querySelector('.ingredients').appendChild( document.createElement('li')).textContent = val  
         }
       })
 }
