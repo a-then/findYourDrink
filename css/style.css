@@ -1,0 +1,137 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+.hidden {
+  display:none;
+}
+#logo {
+  width: 200px;
+  margin: 0;
+}
+header, footer {
+  background: black;
+  color: white;
+  padding: 2rem;
+}
+main {
+  padding: 2rem;
+}
+.lookForCocktail {
+  text-align: center; 
+}
+input {
+  margin-bottom: 1rem;
+  width: 100%;
+  padding: 1rem;
+  color: #ff407c;
+}
+h3 {
+  color:#ff407c;
+}
+.lookForCocktail, button {
+  align-items: center;
+  background-image: linear-gradient(120deg,#00DDEB,  #5B42F3 50%, #ff407c );
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+button:active,
+button:hover {
+  outline: 0;
+}
+
+.borderColor, button span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+button:hover span {
+  background: none;
+}
+
+@media (min-width: 768px) {
+  button {
+    font-size: 24px;
+    min-width: 196px;
+  }
+}
+/******************************************
+/* LAYOUT
+/*******************************************/
+body {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 3fr repeat(2, 1fr);
+  
+}
+  
+header { grid-area: 1 / 1 / 4 / 2; }
+main { grid-area: 1 / 2 / 4 / 5; }
+footer { grid-area: 4 / 1 / 5 / 5; }
+.drinkContainer {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  grid-template-rows: 0.5fr repeat(2, 1fr);
+  grid-column-gap: 5px;
+  grid-row-gap: 10px;
+  padding: 0 1rem ;
+}  
+h2 { 
+  grid-area: 1 / 1 / 2 / 3; 
+  padding-top: 1rem;
+}
+img { grid-area: 2 / 1 / 4 / 2; }
+.ingredients { grid-area: 2 / 2 / 3 / 3; }
+.instructions { grid-area: 3 / 2 / 4 / 3; }
+
+h3, p {
+  margin: 0 1rem;
+}
+p {
+  padding-top: 1rem;
+}
+
+.ingredientsList {
+  display: flex;
+}
+.ingredients {
+  list-style-type: none;
+  padding-left: 5px;
+}
+img{
+  display: block;
+  /* margin: 0 auto; */
+  width: 300px;
+  height: auto;
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
