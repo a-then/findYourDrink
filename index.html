@@ -1,43 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-    	<meta charset="utf-8">
-    	<meta name="description" content="This is where your description goes">
-    	<meta name="keywords" content="one, two, three">
 
-		<title>Title in the tab</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="This is where your description goes">
+	<meta name="keywords" content="one, two, three">
 
-		<!-- external CSS link -->
-		<link rel="stylesheet" href="css/normalize.css">
-		<link rel="stylesheet" href="css/style.css">
-	</head>
-	<body>
-		<header>
-			<img id="logo" src="assets/FD.png" alt="get your drink logo">
-			
-		</header>
-		<main>
+	<title>GYD</title>
+
+	<!-- external CSS link -->
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<header>
+		<img id="logo" src="assets/FD.png" alt="get your drink logo">
+
+		<nav>
+			<ul>
+				<li class="menu"><a href="#">Home</a></li>
+				<li class="menu"><a href="#">About</a></li>
+				<li class="menu"><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+		<main class="borderColor">
 			<section class="lookForCocktail">
-				<div class="borderColor">
-					<h1>Look up your cocktail</h1>
-					<input type="text" name="Search" placeholder="Search by cocktail name" value="">
-					<button class="borderColor" type="button" name="button">
-						<span>Get Recipe</span>
-					</button>
-				</div>
+				<h2>Look up your cocktail</h2>
+				<input type="text" name="Search" placeholder="Search by cocktail name" value="">
+				<button class="borderColor" type="button" name="button">Get Recipe</button>
 			</section>
-			<section class="drinkContainer hidden">
-				<h2>Name</h2>
+
+			<section class="drinkContainer" id="hidden">
+				<h2 class="drink">Name</h2>
 				<img id="cocktailThumb" src="" alt="">
 				<div class="ingredientsContainer">
 					<h3>Ingredients:</h3>
 					<div class="ingredientsList">
-						<ul class="measures">
-						
-						</ul>
-						<ul class="ingredients">
-							<!-- li come from js -->
-						</ul>
+						<!-- li come from js -->
+						<ul class="measures"></ul>
+						<ul class="ingredients"></ul>
 					</div>
 				</div>
 				<div class="instructionsContainer">
@@ -45,27 +49,29 @@
 					<p class="instructions"></p>
 				</div>
 			</section>
-		</main>
-		<section class = 'carouselWrapper'>
-			<div class="slideContainer">
-				<img src="" alt="" class="carouselSlide">
-			</div>
-			<div class="slideContainer">
-				<img src="" alt="" class="carouselSlide">
-			</div>
-			<div class="slideContainer">
-				<img src="" alt="" class="carouselSlide">
-			</div>
-			<div class="slideContainer">
-				<img src="" alt="" class="carouselSlide">
-			</div>
-			<div class="slideContainer">
-				<img src="" alt="" class="carouselSlide">
-			</div>
-		</section>
-		<footer>
-			<span>Developed by <a href="https://github.com/a-then">@a-then</a></span>
-		</footer>
-		<script type="text/javascript" src="js/main.js"></script>
-	</body>
+		
+	</main>
+	<!-- <section class='carouselWrapper'>
+		<div class="slideContainer">
+			<img src="" alt="" class="carouselSlide">
+		</div>
+		<div class="slideContainer">
+			<img src="" alt="" class="carouselSlide">
+		</div>
+		<div class="slideContainer">
+			<img src="" alt="" class="carouselSlide">
+		</div>
+		<div class="slideContainer">
+			<img src="" alt="" class="carouselSlide">
+		</div>
+		<div class="slideContainer">
+			<img src="" alt="" class="carouselSlide">
+		</div>
+	</section> -->
+	<footer>
+		<span>Developed by <a href="https://github.com/a-then">@a-then</a></span>
+	</footer>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+
 </html>
