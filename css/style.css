@@ -183,3 +183,8 @@ img{
 #hidden {
   display:none;
 }
+.error {
+  display: block;
+  color: red;
+  font-style: italic;
+}
